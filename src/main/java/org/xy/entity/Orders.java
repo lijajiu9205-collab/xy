@@ -3,14 +3,13 @@ package org.xy.entity;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-import org.springframework.context.annotation.Primary;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
 @TableName("orders")
-public class orders {
+public class Orders {
     @TableId
     //主键
     private Long id;
@@ -19,16 +18,16 @@ public class orders {
     //商品id
     private Long productId;
     //买家id
-    private Long buyId;
+    private Long buyerId;
     //卖家id
     private Long sellerId;
     //下单时的商品标题快照
     private String titleSnapshot;
     //下单时的成交价快照
-    private BigDecimal PriceSnapshot;
+    private BigDecimal priceSnapshot;
     //约定的交易地点
     private String tradePlace;
-    //付款状态 0待付款 1已付款 2已完成 3已取消
+    //订单状态 0待付款 1已付款 2已完成 3已取消
     private Integer status;
     //取消原因
     private String cancelReason;

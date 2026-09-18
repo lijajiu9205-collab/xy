@@ -17,7 +17,7 @@ public class User {
     private String username;
     //密码
     private String password;
-    //用户名
+    //昵称
     private String nickname;
     //手机号
     private String phone;

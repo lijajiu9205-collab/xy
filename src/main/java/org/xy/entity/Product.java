@@ -19,17 +19,17 @@ public class Product {
     private String description;
     //售价，保留两位小数
     private BigDecimal price;
-    //成色 1全新 2九成新 3七成新 4一般
-    private Integer conditionId;
+    //成色 1全新 2九成新 3一般
+    private Integer conditionLv;
     //所属分类id
-    private Integer categoryId;
+    private Long categoryId;
     //发布者id
-    private Integer sellerId;
+    private Long sellerId;
     //封面图
     private String coverImg;
     //期望交易地点
     private String tradePlace;
-    //审核状态 0待审核 1在售 2已锁定 3已售出 4已下架
+    //商品状态 0待审核 1在售 2已锁定 3已售出 4已下架
     private Integer status;
     //逻辑删除 0否1是
     private Integer isDeleted;
