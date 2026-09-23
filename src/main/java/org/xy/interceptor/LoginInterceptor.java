@@ -8,7 +8,6 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.xy.common.UserContext;
-
 @RequiredArgsConstructor
 public class LoginInterceptor implements HandlerInterceptor {
     private final StringRedisTemplate stringRedisTemplate;
@@ -34,11 +33,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         UserContext.setUserId(Long.valueOf(userId));
         return true;
     }
-
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable Exception ex) throws Exception {
         UserContext.remove();
     }
-
-
 }
